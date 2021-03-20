@@ -23,4 +23,4 @@ git clone "git@github.com:Varun487/WrittenDigitClassifier.git"
 # Credits
 
 This project is inspired by a medium article by Carlos Aguayo.
-[Click here to view the article.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04])
+[Click here to view the article.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
