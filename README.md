@@ -1,7 +1,7 @@
 # Simple Hand-Written Digit Classifier
 
 A simple hand-written digit classifier which can classify digits with <>% of accuracy.
-You can visit the website at [site].
+You can visit the website [here](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04).
 
 # Project components
 
