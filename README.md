@@ -1,7 +1,7 @@
 # Simple Hand-Written Digit Classifier
 
 A simple hand-written digit classifier which can classify digits with 98% accuracy.
-You can visit the [website here](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04) to try this yourself.
+You can visit the [website here](https://varun487.github.io/WrittenDigitClassifier/) to try this yourself.
 
 # Project components
 
@@ -25,7 +25,7 @@ You can visit the [website here](https://towardsdatascience.com/deploying-a-simp
 ## UI
 
 - A website made using __Vue js__ to test and showcase the classification prowess of the model.
-- You can visit the [website here.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
+- You can visit the [website here.](https://varun487.github.io/WrittenDigitClassifier/)
 
 # To build this on your computer
 
