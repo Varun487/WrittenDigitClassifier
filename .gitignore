@@ -130,5 +130,3 @@ dmypy.json
 
 # Project files
 .idea/
-test.csv
-train.csv

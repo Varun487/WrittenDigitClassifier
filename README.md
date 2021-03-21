@@ -1,14 +1,14 @@
 # Simple Hand-Written Digit Classifier
 
 A simple hand-written digit classifier which can classify digits with 98% accuracy.
-You can visit the website [here](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04) to try this yourself.
+You can visit the [website here](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04) to try this yourself.
 
 # Project components
 
 ## Dataset
 
 - We are using the MNIST dataset to train and test our model to recognise digits.
-- You can get the dataset [here](https://www.kaggle.com/c/digit-recognizer/data)
+- You can view the [dataset here.](https://www.kaggle.com/c/digit-recognizer/data)
 
 ## Model
 
@@ -24,8 +24,8 @@ You can visit the website [here](https://towardsdatascience.com/deploying-a-simp
 
 ## UI
 
-- A website to test and showcase the classification prowess of the model.
-- You can visit the website [here.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
+- A website made using __Vue js__ to test and showcase the classification prowess of the model.
+- You can visit the [website here.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
 
 # To build this on your computer
 
@@ -38,5 +38,4 @@ git clone "git@github.com:Varun487/WrittenDigitClassifier.git"
 
 # Credits
 
-This project is inspired by a medium article by Carlos Aguayo.
-[Click here to view the article.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
+This project is inspired by a [medium article by Carlos Aguayo.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
