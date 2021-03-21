@@ -4,6 +4,7 @@
 		<Draw />
 		<Heading msg="Recognised digit"/>
 		<Digit />
+		<ClearButton />
 		<Info />
 		<Footer />
 	</div>
@@ -15,6 +16,7 @@ import Draw from './Draw.vue';
 import Digit from './Digit.vue';
 import Info from "./Info.vue";
 import Footer from "./Footer.vue";
+import ClearButton from "./ClearButton.vue";
 
 export default {
   name: 'Base',
@@ -22,6 +24,7 @@ export default {
     Heading,
 	Draw,
 	Digit,
+	ClearButton,
 	Info,
 	Footer
   }
