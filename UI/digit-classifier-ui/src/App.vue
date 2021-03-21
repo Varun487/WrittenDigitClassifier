@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Varun's Written Digit Classifier's Vue.js App"/>
+  <Base />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Base from './components/Base.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Base,
   }
 }
 </script>
@@ -21,6 +20,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
