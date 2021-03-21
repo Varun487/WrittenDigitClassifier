@@ -29,11 +29,23 @@ You can visit the [website here](https://towardsdatascience.com/deploying-a-simp
 
 # To build this on your computer
 
-1. ```cd``` to where you want the project to live
-2. Run these commands:
+1. `cd` to where you want the project to live.
+    - Create a virtual environment and activate it. `optional`
+2. To set up the project, run these commands:
 ```
 git clone "git@github.com:Varun487/WrittenDigitClassifier.git"
 
+cd WrittenDigitClassifier
+
+pip install -r requirements.txt
+```
+3. To run the jupyter notebook:
+```
+jupter notebook
+```
+4. To build the UI:
+```
+npm run build
 ```
 
 # Credits
