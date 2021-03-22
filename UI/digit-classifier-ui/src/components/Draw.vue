@@ -23,7 +23,6 @@ export default {
   data() {
     return {
       canvas: null,
-      canvasOffset: 0,
       x: 0,
       y: 0,
       isDrawing: false,
@@ -32,7 +31,6 @@ export default {
   mounted() {
     var c = this.$refs["Canvas"];
     this.canvas = c.getContext("2d");
-    this.canvasOffset = c.getBoundingClientRect();
   },
   methods: {
     drawCircle(x, y) {
@@ -63,6 +61,9 @@ export default {
         this.isDrawing = false;
       }
     },
+	clearCanvas() {
+		this.canvas.clearRect(0, 0, 300, 300);
+	}
   },
 };
 </script>

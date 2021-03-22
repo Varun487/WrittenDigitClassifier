@@ -1,14 +1,12 @@
 <template>
 	<div>
-		<button class="clear-btn">Clear</button>
+		<button class="clear-btn" @click="$emit('clear')">Clear</button>
 	</div>
 </template>
 
 <script>
 export default {
   name: 'ClearButton',
-  methods: {
-  }
 }
 </script>
 
