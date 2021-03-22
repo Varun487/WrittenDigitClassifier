@@ -1,7 +1,7 @@
 # Simple Hand-Written Digit Classifier
 
 A simple hand-written digit classifier which can classify digits with 98% accuracy.
-You can visit the [website here](https://varun487.github.io/WrittenDigitClassifier/) to try this yourself.
+You can [visit the website](https://varun487.github.io/WrittenDigitClassifier/) to try this yourself.
 
 # Project components
 
@@ -25,7 +25,7 @@ You can visit the [website here](https://varun487.github.io/WrittenDigitClassifi
 ## UI
 
 - A website made using __Vue js__ to test and showcase the classification prowess of the model.
-- You can visit the [website here.](https://varun487.github.io/WrittenDigitClassifier/)
+- You can [visit the website.](https://varun487.github.io/WrittenDigitClassifier/)
 
 # To build this on your computer
 
@@ -51,3 +51,15 @@ npm run build
 # Credits
 
 This project is inspired by a [medium article by Carlos Aguayo.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
+
+# TODO
+- UI
+	* Clear button working for canvas
+	* Get data from canvas
+	* Run ML on the input data, produce output
+	* Send output to Digit component
+	* Show correct Digit in the component
+	* Make Clear button working for Digit
+	* Make the canvas sensitve to touch
+	* Mobile responsive
+	* Add CSS, improve site design
