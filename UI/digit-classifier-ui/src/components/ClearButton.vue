@@ -7,6 +7,8 @@
 <script>
 export default {
   name: 'ClearButton',
+  methods: {
+  }
 }
 </script>
 

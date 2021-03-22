@@ -1,11 +1,19 @@
 <template>
   <div>
     <h2>Draw a number using the cursor or your finger</h2>
-    <canvas class="Canvas" width="300" height="300" ref="Canvas" @mousemove="draw" @mousedown.stop="beginDrawing" @mouseup.stop="stopDrawing" />
+    <canvas
+      class="Canvas"
+      width="300"
+      height="300"
+      ref="Canvas"
+      @mousemove="draw"
+      @mousedown.stop="beginDrawing"
+      @mouseup.stop="stopDrawing"
+    />
     <br />
     <br />
     <br />
-    <span>Cursor position (x, y): ({{ x }}, {{ y }})</span>
+    <span>Cursor/finger position (x, y): ({{ x }}, {{ y }})</span>
   </div>
 </template>
 
@@ -27,23 +35,17 @@ export default {
     this.canvasOffset = c.getBoundingClientRect();
   },
   methods: {
-    ShowCoordinates(e) {
-      this.x = e.offsetX;
-      this.y = e.offsetY;
-    },
-    drawLine(x1, y1, x2, y2) {
+    drawCircle(x, y) {
       let ctx = this.canvas;
       ctx.beginPath();
-      ctx.strokeStyle = "blue";
-      ctx.lineWidth = 2;
-      ctx.moveTo(x1, y1);
-      ctx.lineTo(x2, y2);
-      ctx.stroke();
+      ctx.fillStyle = "blue";
+      ctx.arc(x, y, 20, 0, 2 * 3.14159);
+      ctx.fill();
       ctx.closePath();
     },
     draw(e) {
       if (this.isDrawing) {
-        this.drawLine(this.x, this.y, e.offsetX, e.offsetY);
+        this.drawCircle(e.offsetX, e.offsetY);
         this.x = e.offsetX;
         this.y = e.offsetY;
       }
@@ -55,7 +57,7 @@ export default {
     },
     stopDrawing(e) {
       if (this.isDrawing) {
-        this.drawLine(this.x, this.y, e.offsetX, e.offsetY);
+        this.drawCircle(e.offsetX, e.offsetY);
         this.x = 0;
         this.y = 0;
         this.isDrawing = false;
