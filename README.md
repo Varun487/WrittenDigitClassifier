@@ -51,13 +51,3 @@ npm run build
 # Credits
 
 This project is inspired by a [medium article by Carlos Aguayo.](https://towardsdatascience.com/deploying-a-simple-machine-learning-model-into-a-webapp-using-tensorflow-js-3609c297fb04)
-
-# TODO
-- UI
-	* Run ML on the Draw input data, predict output
-	* Send output to Digit component
-	* Show correct Digit in the component
-	* Make Clear button working for Digit
-	* Make the canvas sensitve to touch
-	* Mobile responsive
-	* Add CSS, improve site design

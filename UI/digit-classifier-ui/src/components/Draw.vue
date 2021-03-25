@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Draw a number using the cursor or your finger</h2>
+    <h2>Draw a number using the cursor in the space below</h2>
     <canvas
       class="Canvas"
       ref="Canvas"
@@ -13,7 +13,7 @@
     <br />
     <br />
     <br />
-    <span>Cursor/finger position (x, y): ({{ x }}, {{ y }})</span>
+    <span>Cursor position (x, y): ({{ x }}, {{ y }})</span>
   </div>
 </template>
 
@@ -52,6 +52,7 @@ export default {
       this.x = e.offsetX;
       this.y = e.offsetY;
       this.isDrawing = true;
+      this.$emit("BeginDrawing");
     },
     stopDrawing(e) {
       if (this.isDrawing) {

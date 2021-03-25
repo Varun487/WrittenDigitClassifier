@@ -1,7 +1,11 @@
 <template>
   <div class="main">
     <Heading msg="Written Digit Classifier" />
-    <Draw ref="Draw" @StoppedDrawing="ComputeDigit" />
+    <Draw
+      ref="Draw"
+      @BeginDrawing="clearDigitCanvas"
+      @StoppedDrawing="ComputeDigit"
+    />
     <Heading msg="Recognised digit" />
     <Digit ref="Digit" />
     <ClearButton @clear="clearCanvas" />
@@ -17,6 +21,7 @@ import Digit from "./Digit.vue";
 import Info from "./Info.vue";
 import Footer from "./Footer.vue";
 import ClearButton from "./ClearButton.vue";
+import * as tf from "@tensorflow/tfjs";
 
 export default {
   name: "Base",
@@ -29,28 +34,29 @@ export default {
     Footer,
   },
   methods: {
+    clearDigitCanvas() {
+      this.$refs["Digit"].clearCanvas();
+    },
     clearCanvas() {
       this.$refs["Draw"].clearCanvas();
       this.$refs["Digit"].clearCanvas();
     },
     ComputeDigit() {
       var imgData = this.$refs["Draw"].getData();
-    //   console.log("Original Image length: ", imgData.data.length);
-    //   console.log("Original Image height: ", imgData.height);
-    //   console.log("Original Image width: ", imgData.width);
-    //   console.log("Original Image data: ", imgData.data);
 
       var blueData = [];
       for (var i = 2; i < 3136; i += 4) {
         blueData.push(imgData.data[i] / 255);
       }
-      console.log("Image data: ", blueData);
 
-      //   tf.loadLayersModel("../../../model/model.json").then(function (model) {
-      //     window.model = model;
-      //   });
-
-      this.$refs["Digit"].drawDigit("2");
+      window.model
+        .predict([tf.tensor(blueData).reshape([1, 784])])
+        .array()
+        .then((scores) => {
+          scores = scores[0];
+          var predicted = scores.indexOf(Math.max(...scores));
+          this.$refs["Digit"].drawDigit(predicted.toString());
+        });
     },
   },
 };
