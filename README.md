@@ -2,9 +2,9 @@
 
 A simple hand-written digit classifier which can classify digits with 98% accuracy.
 
-![](https://github.com/Varun487/WrittenDigitClassifier/blob/main/WrittenDigitClassifier.gif)
-
 You can [visit the website](https://varun487.github.io/WrittenDigitClassifier/) to try this yourself.
+
+![](https://github.com/Varun487/WrittenDigitClassifier/blob/main/WrittenDigitClassifier.gif)
 
 # Project components
 
