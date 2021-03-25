@@ -54,8 +54,7 @@ This project is inspired by a [medium article by Carlos Aguayo.](https://towards
 
 # TODO
 - UI
-	* Get data from Draw
-	* Run ML on the Draw input data, produce output
+	* Run ML on the Draw input data, predict output
 	* Send output to Digit component
 	* Show correct Digit in the component
 	* Make Clear button working for Digit

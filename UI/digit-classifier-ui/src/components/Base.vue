@@ -1,9 +1,9 @@
 <template>
   <div class="main">
     <Heading msg="Written Digit Classifier" />
-    <Draw ref="Draw" />
+    <Draw ref="Draw" @StoppedDrawing="ComputeDigit" />
     <Heading msg="Recognised digit" />
-    <Digit />
+    <Digit ref="Digit" />
     <ClearButton @clear="clearCanvas" />
     <Info />
     <Footer />
@@ -31,6 +31,26 @@ export default {
   methods: {
     clearCanvas() {
       this.$refs["Draw"].clearCanvas();
+      this.$refs["Digit"].clearCanvas();
+    },
+    ComputeDigit() {
+      var imgData = this.$refs["Draw"].getData();
+    //   console.log("Original Image length: ", imgData.data.length);
+    //   console.log("Original Image height: ", imgData.height);
+    //   console.log("Original Image width: ", imgData.width);
+    //   console.log("Original Image data: ", imgData.data);
+
+      var blueData = [];
+      for (var i = 2; i < 3136; i += 4) {
+        blueData.push(imgData.data[i] / 255);
+      }
+      console.log("Image data: ", blueData);
+
+      //   tf.loadLayersModel("../../../model/model.json").then(function (model) {
+      //     window.model = model;
+      //   });
+
+      this.$refs["Digit"].drawDigit("2");
     },
   },
 };

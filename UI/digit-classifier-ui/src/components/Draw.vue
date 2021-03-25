@@ -3,9 +3,9 @@
     <h2>Draw a number using the cursor or your finger</h2>
     <canvas
       class="Canvas"
-      width="300"
-      height="300"
       ref="Canvas"
+      width="280"
+      height="280"
       @mousemove="draw"
       @mousedown.stop="beginDrawing"
       @mouseup.stop="stopDrawing"
@@ -60,10 +60,15 @@ export default {
         this.y = 0;
         this.isDrawing = false;
       }
+      this.$emit("StoppedDrawing");
     },
-	clearCanvas() {
-		this.canvas.clearRect(0, 0, 300, 300);
-	}
+    clearCanvas() {
+      this.canvas.clearRect(0, 0, 280, 280);
+    },
+    getData() {
+      this.canvas.drawImage(this.$refs["Canvas"], 0, 0, 28, 28);
+      return this.canvas.getImageData(0, 0, 28, 28);
+    },
   },
 };
 </script>
@@ -71,7 +76,7 @@ export default {
 <style scoped>
 .Canvas {
   border: 1px solid #000000;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
 }
 </style>
